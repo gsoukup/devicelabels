@@ -1,0 +1,3 @@
+Dunaujvaros 7-1;4
+Dunaujvaros 2-5;4
+TRA_IP67;3
