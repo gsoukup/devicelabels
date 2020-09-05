@@ -2,9 +2,15 @@
 # -*- Coding:utf-8 -*-
 # Mikros feliratokhoz szukseges szamok darab-darab
 
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument("filepath", help="Feliratok es darab szam fajl.")
+args = parser.parse_args()
+
 #Deklaracio
 adatok = []
-path = "betuk.txt"
+path = args.filepath
 
 #Main
 print("Add meg a feliratokat es hogy hany darab szukseges!")
