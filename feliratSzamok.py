@@ -16,13 +16,20 @@ print(f"Megadott felirat es ahany darab kell belole: {felirat} - {i} db")
 feliratOsszes = append( felirat,i )
 """
 
+counter_dict = {}
 with open(path) as ff:
-
     for line in ff:
-
         line = line.strip()
         text, count = line.split(";")
-        adatok.append(line)
-        print(text)
+        text = text.upper()
+        count = int(count)
+        char_list = list(text)
+        for char in char_list:
+            if char in counter_dict:
+                counter_dict[char] += count 
+            else:
+                counter_dict[char] = count
+
+print(counter_dict)
 
 
