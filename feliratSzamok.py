@@ -21,8 +21,8 @@ with open(path) as ff:
     for line in ff:
 
         line = line.strip()
-        line = line.split(";")
+        text, count = line.split(";")
         adatok.append(line)
-        print(adatok)
+        print(text)
 
 
